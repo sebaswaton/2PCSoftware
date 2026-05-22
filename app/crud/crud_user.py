@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from app.models.user import Usuario
 from app.schemas.user import UsuarioCreate, RecicladorCreate, UsuarioUpdate
 from app.core.security import get_password_hash
+from app.prototype.usuario_prototype import UsuarioPrototype
 
 
 def get_by_correo(db: Session, correo: str) -> Usuario | None:
@@ -66,16 +67,19 @@ def validar_reciclador(db: Session, usuario_id: int, accion: str) -> Usuario | N
     usuario = get_by_id(db, usuario_id)
     if not usuario or usuario.rol != "reciclador":
         return None
-    usuario.estado_validacion = accion
-    usuario.activo = accion == "aprobado"
+    clon = UsuarioPrototype(usuario).set(
+        estado_validacion=accion,
+        activo=(accion == "aprobado"),
+    )
+    clon.apply(usuario)
     db.commit()
     db.refresh(usuario)
     return usuario
 
 
 def update_perfil(db: Session, usuario: Usuario, data: UsuarioUpdate) -> Usuario:
-    for field, value in data.model_dump(exclude_none=True).items():
-        setattr(usuario, field, value)
+    clon = UsuarioPrototype(usuario).set(**data.model_dump(exclude_none=True))
+    clon.apply(usuario)
     db.commit()
     db.refresh(usuario)
     return usuario
