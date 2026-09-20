@@ -21,17 +21,12 @@
         "cells": [
           {
             "position": {
-              "x": 480,
-              "y": 290
+              "x": 510,
+              "y": 330
             },
             "size": {
               "width": 580,
               "height": 330
-            },
-            "attrs": {
-              "label": {
-                "text": "Trust Boundary"
-              }
             },
             "visible": true,
             "shape": "trust-boundary-box",
@@ -39,7 +34,7 @@
             "id": "7de758ac-f00c-413d-9150-66f2dfd4ad59",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -307,6 +302,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Base de datos (MySQL/PostgresSQL)"
+              },
               "topLine": {
                 "strokeWidth": 1.5,
                 "strokeDasharray": null
@@ -404,7 +402,7 @@
             "id": "63ccf159-5a56-43d3-9696-46b25eb40678",
             "data": {
               "type": "tm.Store",
-              "name": "Store",
+              "name": "Base de datos (MySQL/PostgresSQL)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -428,6 +426,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Sistema de archivos"
+              },
               "topLine": {
                 "strokeWidth": 1.5,
                 "strokeDasharray": null
@@ -525,7 +526,7 @@
             "id": "821309b4-23d4-4f36-8697-3d19df8af69c",
             "data": {
               "type": "tm.Store",
-              "name": "Store",
+              "name": "Sistema de archivos",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -559,7 +560,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Queries SQL",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -575,7 +576,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Queries SQL"
             ],
             "id": "fbb75ed9-f98e-4f8a-ac13-bedce94c4819",
             "source": {
@@ -607,7 +608,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Lecturs/Escritura de archivos",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -623,7 +624,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Lecturs/Escritura de archivos"
             ],
             "id": "dce65382-e2c3-4460-8abe-4ad54f2ed792",
             "source": {
@@ -633,7 +634,13 @@
             "target": {
               "cell": "821309b4-23d4-4f36-8697-3d19df8af69c",
               "port": "1bf0e1cb-d706-4d93-a9a2-0d41bee8afcb"
-            }
+            },
+            "vertices": [
+              {
+                "x": 910,
+                "y": 450
+              }
+            ]
           },
           {
             "position": {
@@ -772,7 +779,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "HTTP/HTTPS (requests) ",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -788,7 +795,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "HTTP/HTTPS (requests) "
             ],
             "id": "6e2ac230-9e91-44b8-a620-7012b3910e56",
             "source": {
@@ -820,7 +827,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Explotacion directa de servicios",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -836,7 +843,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
+              "Explotacion directa de servicios"
             ],
             "id": "a5de78fd-d647-4b83-a59e-b2ac77a6cd17",
             "source": {
