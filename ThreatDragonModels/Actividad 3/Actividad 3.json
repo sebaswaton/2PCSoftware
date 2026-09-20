@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "7de758ac-f00c-413d-9150-66f2dfd4ad59",
             "zIndex": -1,
+            "id": "7de758ac-f00c-413d-9150-66f2dfd4ad59",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -46,7 +46,8 @@
               "crossingFlows": [
                 "fbb75ed9-f98e-4f8a-ac13-bedce94c4819",
                 "dce65382-e2c3-4460-8abe-4ad54f2ed792",
-                "ab45a3e8-f5ef-4809-9dc0-923f5a55a07b"
+                "6e2ac230-9e91-44b8-a620-7012b3910e56",
+                "a5de78fd-d647-4b83-a59e-b2ac77a6cd17"
               ],
               "containedElements": [
                 "6531f8a0-a6c8-4c8a-88cb-4ba184e3612f",
@@ -54,123 +55,6 @@
                 "63ccf159-5a56-43d3-9696-46b25eb40678",
                 "821309b4-23d4-4f36-8697-3d19df8af69c"
               ]
-            }
-          },
-          {
-            "position": {
-              "x": 367.5,
-              "y": 80
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Kali Linux (Pentester)"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "808e8ce1-599e-4c59-b647-b318d9983acf"
-                },
-                {
-                  "group": "right",
-                  "id": "e024d22b-07aa-44f8-8338-1afc18627aef"
-                },
-                {
-                  "group": "bottom",
-                  "id": "7e512da8-8780-4a6b-8a64-4e332764e033"
-                },
-                {
-                  "group": "left",
-                  "id": "11745be6-1095-4cb6-8b59-1fd4cd9a5d38"
-                }
-              ]
-            },
-            "id": "51b48760-0b2e-4143-b619-88df13d353ab",
-            "zIndex": 1,
-            "data": {
-              "type": "tm.Actor",
-              "name": "Kali Linux (Pentester)",
-              "description": "",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
             }
           },
           {
@@ -183,6 +67,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Aplicacion Web (DVWA/Apache)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -191,6 +78,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -274,10 +162,9 @@
               ]
             },
             "id": "6531f8a0-a6c8-4c8a-88cb-4ba184e3612f",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Aplicacion Web (DVWA/Apache)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -300,6 +187,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Servicios de red (FTP/SSH/SMB)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -308,6 +198,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -391,10 +282,9 @@
               ]
             },
             "id": "ff3cf6d7-d4a3-42da-a904-40ecae075df8",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Servicios de red (FTP/SSH/SMB)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -428,6 +318,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -511,7 +402,6 @@
               ]
             },
             "id": "63ccf159-5a56-43d3-9696-46b25eb40678",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "Store",
@@ -549,6 +439,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -632,7 +523,6 @@
               ]
             },
             "id": "821309b4-23d4-4f36-8697-3d19df8af69c",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "Store",
@@ -746,6 +636,123 @@
             }
           },
           {
+            "position": {
+              "x": 686,
+              "y": 169
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Kali Linux (Pentester)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "808e8ce1-599e-4c59-b647-b318d9983acf"
+                },
+                {
+                  "group": "right",
+                  "id": "e024d22b-07aa-44f8-8338-1afc18627aef"
+                },
+                {
+                  "group": "bottom",
+                  "id": "7e512da8-8780-4a6b-8a64-4e332764e033"
+                },
+                {
+                  "group": "left",
+                  "id": "11745be6-1095-4cb6-8b59-1fd4cd9a5d38"
+                }
+              ]
+            },
+            "id": "d435186f-9eb8-47c0-93a5-38802fbaf475",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Kali Linux (Pentester)",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -761,7 +768,7 @@
             },
             "width": 200,
             "height": 100,
-            "zIndex": 10,
+            "zIndex": 12,
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
@@ -783,23 +790,67 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "ab45a3e8-f5ef-4809-9dc0-923f5a55a07b",
+            "id": "6e2ac230-9e91-44b8-a620-7012b3910e56",
             "source": {
-              "x": 430,
-              "y": 180
+              "cell": "d435186f-9eb8-47c0-93a5-38802fbaf475",
+              "port": "11745be6-1095-4cb6-8b59-1fd4cd9a5d38"
             },
             "target": {
               "cell": "6531f8a0-a6c8-4c8a-88cb-4ba184e3612f",
               "port": "3c1ff9be-ddc5-4185-81f9-c96fc215bb48"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 13,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "7de758ac-f00c-413d-9150-66f2dfd4ad59"
+              ]
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "a5de78fd-d647-4b83-a59e-b2ac77a6cd17",
+            "source": {
+              "cell": "d435186f-9eb8-47c0-93a5-38802fbaf475",
+              "port": "e024d22b-07aa-44f8-8338-1afc18627aef"
+            },
+            "target": {
+              "cell": "ff3cf6d7-d4a3-42da-a904-40ecae075df8",
+              "port": "3c1ff9be-ddc5-4185-81f9-c96fc215bb48"
             },
             "vertices": [
               {
-                "x": 470,
-                "y": 200
-              },
-              {
-                "x": 530,
-                "y": 220
+                "x": 860,
+                "y": 240
               }
             ]
           }
