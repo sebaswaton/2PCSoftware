@@ -846,7 +846,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -867,13 +868,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "32c446b9-9752-4c4f-b91f-8d405207d4dd",
+                  "title": "Inyección SQL desde la app hacia la base de datos",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Falta de validación de entradas permite inyectar sentencias SQL maliciosas en el flujo de consultas. Agente más probable: crimen organizado con motivación financiera.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 40,
+                  "score": ""
+                },
+                {
+                  "id": "28619745-b63e-40da-84b1-adc2a6d39111",
+                  "title": "Exfiltración de datos vía inyección SQL",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Extracción de datos sensibles aprovechando la inyección SQL en el flujo de consultas. \nAgente más probable: crimen organizado o competidores (espionaje industrial).",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 41,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Queries SQL"
@@ -892,7 +925,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -913,13 +947,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "f5d3efd1-6aa1-4633-90aa-f235c86d9862",
+                  "title": "Escritura de archivos maliciosos sin autorización",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Un atacante escribe un archivo malicioso (ej. web shell) hacia el sistema de archivos vía Samba/FTP. Agente más probable: crimen organizado o APTs buscando persistencia.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 42,
+                  "score": ""
+                },
+                {
+                  "id": "fe997806-0659-4279-87bb-143d05d71167",
+                  "title": "Lectura no autorizada de archivos sensibles",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Backups o documentación sensible leídos sin control de acceso adecuado. Agente más probable: competidores o empleados internos.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 43,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Lecturs/Escritura de archivos"
@@ -954,8 +1020,8 @@
                 "text": "Kali Linux (Pentester)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1052,12 +1118,39 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": [],
+              "threats": [
+                {
+                  "id": "4a50e695-7751-4549-8053-dbff306fb66e",
+                  "title": "Suplantación de la IP de origen del atacante",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Un atacante podría falsificar (IP spoofing) el origen de sus conexiones para evadir el control de acceso del segmento del laboratorio.\nAgente más probable: crimen organizado o APTs que buscan ocultar su origen real durante el reconocimiento.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": ""
+                },
+                {
+                  "id": "80902eff-1900-4ab7-a1de-20d85b5d3ce2",
+                  "title": "Negación de acciones realizadas desde el equipo atacante",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Si no se registran las acciones ejecutadas desde una máquina tipo Kali dentro de la red, no hay evidencia forense confiable de qué se hizo.\nAgente más probable: empleados internos que realizan actividades no autorizadas desde una máquina similar.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": ""
+                }
+              ],
               "threatFrequency": {
-                "spoofing": 0,
-                "repudiation": 0
+                "spoofing": 1,
+                "repudiation": 1
               }
             }
           },
@@ -1065,7 +1158,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1086,13 +1180,58 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "ecce3b79-709d-4274-b2a9-3233e1b7acfd",
+                  "title": "Intercepción de peticiones HTTP (MITM)",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Al no usarse HTTPS entre Kali y DVWA, un atacante en la misma red puede interceptar y modificar las peticiones en tránsito. \nAgente más probable: crimen organizado o hacktivistas con acceso a la red del laboratorio.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 34,
+                  "score": ""
+                },
+                {
+                  "id": "551142d7-e90b-4f0b-868d-8d6915b29e94",
+                  "title": "Credenciales de login en texto plano",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "El formulario de login envía usuario y contraseña sin cifrar por HTTP, capturables con Wireshark. \nAgente más probable: empleados internos malintencionados o crimen organizado esnifando la red interna.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": ""
+                },
+                {
+                  "id": "09dfbbd1-a212-4d5b-9ab2-31a63d933fc3",
+                  "title": "Flood de peticiones HTTP",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Envío masivo de peticiones hacia DVWA/Apache para agotar los recursos del servidor. \nAgente más probable: hacktivistas buscando interrumpir el servicio como protesta.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 36,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "HTTP/HTTPS (requests) "
@@ -1117,7 +1256,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1138,13 +1278,58 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "3678303f-f6ce-42ba-9781-124c6ea92291",
+                  "title": "Envío de payloads maliciosos contra FTP/SSH/SMB",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Comandos o payloads enviados directamente contra los servicios de red expuestos. \nAgente más probable: crimen organizado con herramientas de explotación automatizadas (Metasploit).",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": ""
+                },
+                {
+                  "id": "731ffc8f-cacb-4ac2-9d6d-99b3c65d6dfe",
+                  "title": "Captura de credenciales en texto claro",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Credenciales de FTP/Telnet visibles por sniffing del flujo entre Kali y el servidor. \nAgente más probable: empleados internos o crimen organizado con acceso a la red.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 38,
+                  "score": ""
+                },
+                {
+                  "id": "fd4ddcbb-3e2e-4c4f-bed7-2c57a90c9616",
+                  "title": "Fuerza bruta / saturación del canal",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Múltiples intentos de conexión que saturan el canal hacia los servicios de red.\nAgente más probable: hacktivistas o crimen organizado.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 39,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Explotacion directa de servicios"
@@ -1198,6 +1383,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 29
+    "threatTop": 43
   }
 }
